@@ -228,48 +228,43 @@ class Tower
 	}
 
 	// Overload solve(), because the internal solver and all the poles are private, we need ths helper function
-	public void solve()
+	public boolean solve()
 	{
 		// Call the internal solver with the initial values
-		solve(numberOfDiscs, poles[0], poles[1], poles[2]);
+		return solve(numberOfDiscs, poles[0], poles[1], poles[2]);
 	}
 
 	// Solver algorithm
-	private void solve(int n, Pole source, Pole auxiliary, Pole target)
+	private boolean solve(int n, Pole source, Pole auxiliary, Pole target)
 	{
-		//     Recursive Case - When n > 1
-		//     Step 1: Move (n-1) discs from start pole to auxiliary pole.
-		//     Step 2: Move the last disc from start pole to end pole.
-		//     Step 3: Move the (n-1) discs from auxiliary pole to end pole.
-		//     Steps 1 and 3 are recursive invocations of the same procedure.
+		// We'll return false on illegal moves.
+		
+		// Recursive Case - When n > 1
 		if(n > 1)
 		{
 			// Step 1: Move (n-1) discs from start pole to auxiliary pole.
-			solve(n - 1, source, target, auxiliary);
+			if(!solve(n - 1, source, target, auxiliary))
+				return false;
 
 			// Step 2: Move the last disc from start pole to end pole.
 			if(!move(source, target))
-			{
-				// If an illegal move was performed, quit
-				return;
-			}
+				return false;
 
 			// Print progress
 			System.out.println(this);
 
 			// Step 3: Move the (n-1) discs from auxiliary pole to end pole.
-			solve(n - 1, auxiliary, source, target);
+			if(!solve(n - 1, auxiliary, source, target))
+				return false;
 		}
 		//     Base Case - When n = 1
 		//     Move the disc from start pole to end pole
 		else if(n == 1)
 		{
 			if(!move(source, target))
-			{
-				// If an illegal move was performed, quit
-				return;
-			}
+				return false;
 		}
+		return true;
 	}
 
 	// Convert the tower to a string
