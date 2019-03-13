@@ -1,7 +1,7 @@
 PGR103 - Object-oriented Programming
 ====================================
 
-These are the daily challenge solutions for the PGR103 course.
+These are my daily challenge solutions for the PGR103 course.
 
 #### [DailyChallenge 1 - Calculator](DailyChallenge01.java)
 How to read text and integer input.
@@ -50,3 +50,6 @@ Array manipulation. Merge two arrays and remove duplicates in a single pass.
 
 #### [DailyChallenge 16 - Towers of Hanoi](DailyChallenge16.java)
 Recursive algorithm practice.
+
+#### [DailyChallenge 17 - Timelords](DailyChallenge17.java)
+Challenge is to get familiar with the Java Time.
