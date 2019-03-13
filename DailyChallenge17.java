@@ -69,12 +69,12 @@ public class DailyChallenge17
 			// Ask the user for the first birthdate
 			System.out.print("Write person 1's birthday (yyyy-mm-dd): ");
 			String birthdateStr1 = scan.nextLine();
-			LocalDate birthdate1 = LocalDate.parse(birthdateStr1, DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+			LocalDate birthdate1 = LocalDate.parse(birthdateStr1, DateTimeFormatter.ISO_LOCAL_DATE);
 
 			// Ask the user for the second birthdate
 			System.out.print("Write person 2's birthday (yyyy-mm-dd): ");
 			String birthdateStr2 = scan.nextLine();
-			LocalDate birthdate2 = LocalDate.parse(birthdateStr2, DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+			LocalDate birthdate2 = LocalDate.parse(birthdateStr2, DateTimeFormatter.ISO_LOCAL_DATE);
 			
 			// Calculate the number of years between the two dates
 			Period period = Period.between(birthdate1, birthdate2);
