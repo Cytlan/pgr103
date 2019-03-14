@@ -111,7 +111,7 @@ All methods except those with `void` return type must `return something;`
 If statements
 -------------
 
-Do make your code do different things depending on the situation, you need `if` statements.
+To make your code do different things depending on the situation, you need `if` statements.
 
 If statements run the body if the condition in parenthesis is true.
 
@@ -282,7 +282,45 @@ class MyClass
 Reading a file
 --------------
 
-Todo.
+To read a text file line by line:
+
+```java
+// Remember to put these on the top of your file!
+import java.io.IOException;
+import java.io.BufferedReader;
+import java.io.FileReader;
+
+public void readFile()
+{
+	try
+	{
+		// Open the file
+		FileReader file = new FileReader("myfile.txt");
+
+		// New reader
+		BufferedReader reader = new BufferedReader(file);
+
+		// Read the first file
+		String line = reader.readLine();
+
+		// While there are new lines read them
+		while(line != null)
+		{
+			// Print the line
+			System.out.println(line);
+
+			// Read the next line
+			line = reader.readLine();
+		}
+	}
+	// We need this in case an error occurs
+	catch(IOException e)
+	{
+		// Print debug info
+		e.printStackTrace();
+	}
+}
+```
 
 Simplest Java program
 ---------------------
@@ -315,7 +353,7 @@ public int countTo10(int currentValue)
 		return currentValue;
 	}
 
-	// Recursion happens here: We call ourselfes to get the next value
+	// Recursion happens here: We call ourselves to get the next value
 	return countTo10(currentValue + 1);
 }
 ```
