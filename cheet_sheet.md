@@ -282,58 +282,42 @@ class MyClass
 Reading a file
 --------------
 
-To read a text file line by line:
-
+To read a text file line by line, first import the nessecary classes:
 ```java
 // Remember to put these on the top of your file!
 import java.io.IOException;
 import java.io.BufferedReader;
 import java.io.FileReader;
-
-public void readFile()
-{
-	try
-	{
-		// Open the file
-		FileReader file = new FileReader("myfile.txt");
-
-		// New reader
-		BufferedReader reader = new BufferedReader(file);
-
-		// Read the first file
-		String line = reader.readLine();
-
-		// While there are new lines read them
-		while(line != null)
-		{
-			// Print the line
-			System.out.println(line);
-
-			// Read the next line
-			line = reader.readLine();
-		}
-	}
-	// We need this in case an error occurs
-	catch(IOException e)
-	{
-		// Print debug info
-		e.printStackTrace();
-	}
-}
 ```
 
-Simplest Java program
----------------------
-
-All Java programs must have a `public static void main` method (can be in any class).
-
+Then loop until everything has been read:
 ```java
-class MyClass
+try
 {
-	public static void main(String[] args)
+	// Open the file
+	FileReader file = new FileReader("myfile.txt");
+
+	// New reader
+	BufferedReader reader = new BufferedReader(file);
+
+	// Read the first file
+	String line = reader.readLine();
+
+	// While there are new lines read them
+	while(line != null)
 	{
-		// Your code here
+		// Print the line
+		System.out.println(line);
+
+		// Read the next line
+		line = reader.readLine();
 	}
+}
+// We need this in case an error occurs
+catch(IOException e)
+{
+	// Print debug info
+	e.printStackTrace();
 }
 ```
 
