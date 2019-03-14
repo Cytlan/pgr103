@@ -1,7 +1,7 @@
 PGR103 Cheat Sheet
 ==================
 
-This is a cheet cheat for Java programming. It's in no particular order, but I try to keep the simplest concepts closer to the top.
+This is a cheat sheet for Java programming. It's in no particular order, but I try to keep the simplest concepts closer to the top.
 
 It's meant to be used as a quick "how did I do that again?" reference.
 
