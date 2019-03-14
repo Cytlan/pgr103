@@ -23,6 +23,11 @@ Index
     * [for](#for-loops)
     * [while](#while-loops)
     * [do while](#do-while-loops)
+* [Strings](#strings)
+    * [equals](#equals)
+    * [startsWith](#startsWIth)
+    * [endsWith](#endsWith)
+    * [substring](#substring)
 * [Writing text to the output log](#writing-text-to-the-output-log)
 * [Reading user input](#reading-user-input)
 * [Reading a file](#reading-a-file)
@@ -203,6 +208,94 @@ do
 	i++;
 }
 while(i <= 10); // Notice how the condition of the loop is only checked AFTER the loop body has been run
+```
+
+Strings
+-------
+
+The `String` object allows us to modify and manipulate text strings.
+
+```java
+String myString = "This is an example string";
+```
+
+Strings are `case-sensitive`. That means uppercase letters and lowercase letters are *not* equal.
+
+The `String` object has a lot of useful methods we can use.
+
+### equals
+
+We cannot use `==` to compare strings. We must use `equals` instead:
+
+```java
+String myString = "my string";
+if(myString.equals("my string"))
+{
+	System.out.println("The string is equals to \"my string\"!");
+}
+```
+
+### startsWith
+
+Check if a string starts with another string.
+
+```java
+String myString = "This is an example string";
+if(myString.startsWith("This"))
+{
+	System.out.println("The string starts with \"This\"!");
+}
+```
+
+### endsWith
+
+Check if a string ends with another string.
+
+```java
+String myString = "This is an example string";
+if(myString.endsWith("string"))
+{
+	System.out.println("The string ends with \"string.\"!");
+}
+```
+
+### substring
+
+To get a smaller part of a string, you use `substring(int start, int end)`.
+
+The `substring` method takes two arguments:
+* The first letter to start cutting at
+* The letter to stop cutting at
+
+```java
+String myString = "This is an example string";
+String mySubstring = myString.substring(0, 4);
+System.out.println(mySubstring); // Will print "This"
+```
+
+Note that the letter to end at is *not* included in the result. For example:
+
+```java
+String myString = "This is an example string";
+String mySubstring = myString.substring(0, 1);
+System.out.println(mySubstring); // Will print "T"
+```
+
+Notice that the letter at index 1 is not included, only the letter at index 0 is included.
+
+Simplest Java program
+---------------------
+
+All Java programs must have a `public static void main` method (can be in any class).
+
+```java
+class MyClass
+{
+	public static void main(String[] args)
+	{
+		// Your code here
+	}
+}
 ```
 
 Writing text to the output log
