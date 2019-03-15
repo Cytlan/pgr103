@@ -6,7 +6,7 @@ This repository contains stuff related to the PGR103 course.
 Cheat sheet
 -----------
 
-Answers to "How did I do that again?" questions can be found in the [cheat sheet](cheet_sheet.md).
+Answers to "How did I do that again?" questions can be found in the [cheat sheet](cheat_sheet.md).
 
 Daily Challenges
 ----------------
