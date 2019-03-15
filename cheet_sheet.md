@@ -28,6 +28,15 @@ Index
     * [startsWith](#startsWIth)
     * [endsWith](#endsWith)
     * [substring](#substring)
+* [Logic](#loops)
+    * [equal to](#equal-to)
+    * [not equal to](#not-equal-to)
+    * [less than](#less-than)
+    * [greater than](#greater-than)
+    * [and - checking multiple conditions](#and---checking-multiple-conditions)
+    * [or - checking multiple conditions](#or---checking-multiple-conditions)
+    * [grouping - checking multiple conditions](#grouping---checking-multiple-conditions)
+    * [negating](#negating)
 * [Writing text to the output log](#writing-text-to-the-output-log)
 * [Reading user input](#reading-user-input)
 * [Reading a file](#reading-a-file)
@@ -284,6 +293,182 @@ System.out.println(mySubstring); // Will print "T"
 ```
 
 Notice that the letter at index 1 is not included, only the letter at index 0 is included.
+
+Logic
+-----
+
+Logic are operations that results in either `true` or `false`.
+
+### equal to
+
+To check if two numbers are equal, we use `==`.
+
+Notice that we use *two* ='s. If you only use 1 equals sign, you'll actually be *assigning* instead of *comparing*.
+
+```java
+int a = 20;
+int b = 20;
+
+if(a == b)
+{
+	System.out.println("A and B are equal");
+}
+```
+
+You can also use `==` on objects, to check if the variables contains *the same* object.
+
+In other words, it doesn't check if the objects are equal, but if the objects are literally the same object.
+
+```java
+MyObject a = new MyObject();
+MyObject b = a;
+MyObject c = new MyObject();
+
+if(a == b)
+{
+	System.out.println("A and B are the same object");
+}
+if(a == c)
+{
+	// This will not happen, because A and C are two DIFFERENT objects.
+	// The content of the objects doens't matter. It also doesn't matter if they are the same type of object.
+}
+```
+
+### not equal to
+
+To check if two numbers are *not* equal, we use `!=`.
+
+It works exactly the same as `==`, except flipped on its head.
+
+```java
+int a = 10;
+int b = 20;
+
+if(a != b)
+{
+	System.out.println("A and B are not equal");
+}
+```
+
+### less than
+
+If you want to check if one number is smaller than the others, you use `<`.
+
+```java
+int a = 10;
+int b = 20;
+
+if(a < b)
+{
+	System.out.println("A is less than B");
+}
+```
+
+Notice that this won't return true if the two numbers are *equal*. If you want to check if one number is *less than or equal to* another number, use `<=`, like so:
+
+```java
+int a = 20;
+int b = 20;
+
+if(a <= b)
+{
+	System.out.println("A is less than or equal to B");
+}
+```
+
+### greater than
+
+If you want to check if one number is smaller than the others, you use `>`.
+
+```java
+int a = 20;
+int b = 10;
+
+if(a > b)
+{
+	System.out.println("A is greater than B");
+}
+```
+
+Notice that this won't return true if the two numbers are *equal*. If you want to check if one number is *greater than or equal to* another number, use `>=`, like so:
+
+```java
+int a = 20;
+int b = 20;
+
+if(a >= b)
+{
+	System.out.println("A is greater than or equal to B");
+}
+```
+
+### and - checking multiple conditions
+
+If you want to check if multiple conditions are true, you use the logical and operator, `&&`.
+
+
+```java
+int a = 30;
+int b = 20;
+int c = 10;
+
+// if a is greater than b AND b is not equal to c
+if(a > b && b != c)
+{
+	System.out.println("A is greater than B, and B is not equal to C");
+}
+```
+
+### or - checking multiple conditions
+
+To check if at least one of two conditions are true, you use the logical or operator, `||`.
+
+```java
+int a = 30;
+int b = 20;
+int c = 10;
+
+// if a is equal to b OR b is greater than c
+if(a == b || b > c)
+{
+	System.out.println("Either: A is equal to B, or: B is greater than C");
+}
+```
+
+### grouping - checking multiple conditions
+
+If you have many conditions you want to check, but you need to check them in a spesific order, you can group them with parenthesis.
+
+```java
+int a = 30;
+int b = 20;
+int c = 10;
+
+// if a is not equal to b, AND (a is less than b OR b is greater than c)
+if(a != b && (a < b || b > c))
+{
+	System.out.println("A is not equal to B, AND (A is less than B OR B is greater than C)");
+}
+```
+
+### negating
+
+You can "flip" the result of a grouped condition by adding `!` in front of it. If the condition was true, the result will be turned into false and vice versa.
+
+This operator is called *logical not*.
+
+```java
+int a = 30;
+int b = 20;
+int c = 10;
+
+// if a is not equal to b, AND NOT(b is greater than a AND b is greater than c)
+if(a != b || !(b < a && b < c))
+{
+	System.out.println("A is not equal to B, AND NOT(B is greater than A AND B is greater than C)");
+}
+```
 
 Simplest Java program
 ---------------------
