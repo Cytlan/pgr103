@@ -13,53 +13,53 @@ Daily Challenges
 
 These are my daily challenge solutions for the PGR103 course:
 
-#### [DailyChallenge 1 - Calculator](DailyChallenge01.java)
+#### [DailyChallenge 1 - Calculator](DailyChallenges/DailyChallenge01.java)
 How to read text and integer input.
 
-#### [DailyChallenge 2 - Tea Party](DailyChallenge02.java)
+#### [DailyChallenge 2 - Tea Party](DailyChallenges/DailyChallenge02.java)
 Input practice, if statements and methods.
 
-#### [DailyChallenge 3 - StringSplotion](DailyChallenge03.java)
+#### [DailyChallenge 3 - StringSplotion](DailyChallenges/DailyChallenge03.java)
 String manipulation (substring).
 
-#### [DailyChallenge 4 - FizzString](DailyChallenge04.java)
+#### [DailyChallenge 4 - FizzString](DailyChallenges/DailyChallenge04.java)
 Multiple string comparisons.
 
-#### [DailyChallenge 5 - Pig ears](DailyChallenge05.java)
+#### [DailyChallenge 5 - Pig ears](DailyChallenges/DailyChallenge05.java)
 Recursion practice.
 
-#### [DailyChallenge 6 - Ninja replied](DailyChallenge06.java)
+#### [DailyChallenge 6 - Ninja replied](DailyChallenges/DailyChallenge06.java)
 Generating and using random numbers.
 
-#### [DailyChallenge 7 - Red or Blue](DailyChallenge07.java)
+#### [DailyChallenge 7 - Red or Blue](DailyChallenges/DailyChallenge07.java)
 String processing (startsWith).
 
-#### [DailyChallenge 8 - Jinxed sum](DailyChallenge08.java)
+#### [DailyChallenge 8 - Jinxed sum](DailyChallenges/DailyChallenge08.java)
 Simple algorithm with if statements.
 
-#### [DailyChallenge 9 - Palindromes](DailyChallenge09.java)
+#### [DailyChallenge 9 - Palindromes](DailyChallenges/DailyChallenge09.java)
 Reversing strings and numbers.
 
-#### [DailyChallenge 10 - Image Manipulation](DailyChallenge10.java)
+#### [DailyChallenge 10 - Image Manipulation](DailyChallenges/DailyChallenge10.java)
 Image manipulation.
 
-#### [DailyChallenge 11 - Sorting](DailyChallenge11.java)
+#### [DailyChallenge 11 - Sorting](DailyChallenges/DailyChallenge11.java)
 Sorting algorithm (My solution uses quicksort).
 
-#### [DailyChallenge 12 - Read File](DailyChallenge12.java)
+#### [DailyChallenge 12 - Read File](DailyChallenges/DailyChallenge12.java)
 Reading and processing files from disk.
 
-#### [DailyChallenge 13 - Numbers in text](DailyChallenge13.java)
+#### [DailyChallenge 13 - Numbers in text](DailyChallenges/DailyChallenge13.java)
 String processing and integer parsing.
 
-#### [DailyChallenge 14 - Game of Life](DailyChallenge14.java)
+#### [DailyChallenge 14 - Game of Life](DailyChallenges/DailyChallenge14.java)
 Game of Life algorithm.
 
-#### [DailyChallenge 15 - Merge Two](DailyChallenge15.java)
+#### [DailyChallenge 15 - Merge Two](DailyChallenges/DailyChallenge15.java)
 Array manipulation. Merge two arrays and remove duplicates in a single pass.
 
-#### [DailyChallenge 16 - Towers of Hanoi](DailyChallenge16.java)
+#### [DailyChallenge 16 - Towers of Hanoi](DailyChallenges/DailyChallenge16.java)
 Recursive algorithm practice.
 
-#### [DailyChallenge 17 - Timelords](DailyChallenge17.java)
+#### [DailyChallenge 17 - Timelords](DailyChallenges/DailyChallenge17.java)
 Challenge is to get familiar with the Java Time.
