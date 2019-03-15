@@ -28,7 +28,7 @@ Index
     * [startsWith](#startsWIth)
     * [endsWith](#endsWith)
     * [substring](#substring)
-* [Logic](#loops)
+* [Logic](#logic)
     * [equal to](#equal-to)
     * [not equal to](#not-equal-to)
     * [less than](#less-than)
