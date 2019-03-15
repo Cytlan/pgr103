@@ -28,6 +28,8 @@ Index
     * [startsWith](#startsWIth)
     * [endsWith](#endsWith)
     * [substring](#substring)
+    * [Adding to a string](#adding-to-a-string)
+    * [toString](#tostring)
 * [Logic](#logic)
     * [equal to](#equal-to)
     * [not equal to](#not-equal-to)
@@ -169,7 +171,7 @@ The `for` loop is the most common type of loop.
 * The `for` keyword
 * Initialisation - Single line of code to do before the loop starts
 * Condition - `if` statement to do every time the loop loops
-* Operation - Single line of code to to every time the loop loops
+* Operation - Single line of code to do every time the loop loops
 * The loop body - The code to run on every loop
 
 The initialisation, condition and operation are separated by `;`
@@ -293,6 +295,58 @@ System.out.println(mySubstring); // Will print "T"
 ```
 
 Notice that the letter at index 1 is not included, only the letter at index 0 is included.
+
+### Adding to a string
+
+You can add strings and numbers to a string with the `+` operator.
+
+```java
+String firstString = "I have";
+int amount = 99;
+String result = firstString+" "+amount+" problems, but adding strings together isn't one of them.";
+```
+
+Result will be:
+```
+I have 99 problems, but adding strings together isn't one of them.
+```
+
+### toString
+
+When making classes, you can turn them into string automatically by creating a `toString()` method in the class.
+
+```java
+class Student
+{
+	String firstName;
+	String lastName;
+
+	public Student(String first, String last)
+	{
+		firstName = first;
+		lastName = last;
+	}
+
+	public String toString()
+	{
+		return firstName + " " + lastName;
+	}
+}
+```
+
+Using this class in code:
+```java
+Student myStudent = new Student("John", "Doe");
+
+System.out.println("My student is: " + myStudent);
+```
+
+Java will automatically call the `toString` method when it needs to turn the `myStudent` object into a string for printing.
+
+The console output will be:
+```
+My student is: John Doe
+```
 
 Logic
 -----
