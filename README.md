@@ -1,7 +1,17 @@
 PGR103 - Object-oriented Programming
 ====================================
 
-These are my daily challenge solutions for the PGR103 course.
+This repository contains stuff related to the PGR103 course.
+
+Cheat sheet
+-----------
+
+Answers to "How did I do that again?" questions can be found in the [cheat sheet](cheet_sheet.md).
+
+Daily Challenges
+----------------
+
+These are my daily challenge solutions for the PGR103 course:
 
 #### [DailyChallenge 1 - Calculator](DailyChallenge01.java)
 How to read text and integer input.
