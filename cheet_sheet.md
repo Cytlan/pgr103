@@ -94,11 +94,12 @@ A method contains 5 parts:
 * Optional modifier (for example `static`)
 * Return type (can be any of the data types).
 * Method name
+* Parameters (Comma separated list in parenthesis)
 * Method body
 
 It looks likes this:
 ```java
-public static int myMethod
+public static int myMethod(int argument)
 {
 	return 1;
 }
@@ -109,6 +110,7 @@ Where
 * `static` is the modifier
 * `int` is the return type
 * `myMethod` is the name
+* `(int argument)` are the parameters
 * `{ return 1; }` is the body.
 
 All methods except those with `void` return type must `return something;`
