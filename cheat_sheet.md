@@ -17,6 +17,7 @@ Index
     * [double](#double)
     * [void](#void)
     * [null](#null)
+* [Casting](#casting)
 * [Methods](#methods)
 * [If statements](#if-statements)
 * [Loops](#loops)
@@ -44,7 +45,13 @@ Index
 * [Reading a file](#reading-a-file)
 * [Simplest Java program](#simplest-java-program)
 * [Recursion](#recursion)
+* [Static](#static)
 * [Constructor](#constructor)
+* [this](#this)
+* [super](#super)
+    * [super constructor](#super-constructor)
+    * [super methods](#super-methods)
+* [Exceptions](#exceptions)
 
 Data types
 ----------
@@ -96,6 +103,10 @@ Your `public static void main(String[] args)` method uses this, because main doe
 ### null
 
 `null` also means "nothing", but where `void` is a *type*, `null` is actually a *value*. Any variable that has an object as type are by default `null` until you assign it something else.
+
+Casting
+-------
+You can "force" an object or type into another object or type. For example, if you have a float and you want to force it into an int, you'd do `int myForcedInt = (int)myFloat;`. You can also do the same with objects. However, you must known what you're doing. Don't try to cast an object into a completely unrelated object!
 
 Methods
 -------
@@ -686,6 +697,38 @@ while(currentValue >= 10)
 }
 ```
 
+Static
+------
+
+You can declare methods or variables as static. When you make variables static, they will be the same throughout the entire program. If you declare a method static, you can call it without having to create a new object.
+
+```java
+class MyClass
+{
+	// This variable is static. So when one object changes it, it changes in all the other objects as well!
+	public static int myClassObjectsCreated = 0;
+
+	public MyClass()
+	{
+		// Increment the static variable by 1, to indicate that a new object has been created
+		myClassObjectsCreated++;
+	}
+
+	public static void main(String[] argv)
+	{
+		// Create some objects
+		MyClass myClass1 = new MyClass();
+		MyClass myClass2 = new MyClass();
+		MyClass myClass3 = new MyClass();
+
+		// Ask ech class how many objects were created (They will all say 3!)
+		System.out.println("myClass1 says "+myClass1.myClassObjectsCreated+" objects has been created.");
+		System.out.println("myClass2 says "+myClass2.myClassObjectsCreated+" objects has been created.");
+		System.out.println("myClass3 says "+myClass3.myClassObjectsCreated+" objects has been created.");
+	}
+}
+```
+
 Constructor
 -----------
 
@@ -704,6 +747,82 @@ class MyClass
 	public MyClass(int yourInt)
 	{
 		myInt = yourInt;
+	}
+}
+```
+
+this
+----
+
+The `this` keywork let's you clear ambiguity as to which data or method you're trying to access.
+
+Example:
+```java
+class MyClass
+{
+	private int myInt;
+
+	public MyClass(int myInt)
+	{
+		this.myInt = myInt; // If we don't use "this" here, the statement would be ambigious. Which "myInt" are we refering to? The one in the class, or the argument we were given? "this" lets us specify which one.
+	}
+}
+```
+
+super
+-----
+
+### super constructor
+
+If you're inheriting a parent class and have overwritten its constructor, you can call the parents constructor in your consturctor. This way you can chain constructors and don't have to repeat code.
+
+```java
+class MyClass extends MyParent
+{
+	private int myInt;
+	MyClass()
+	{
+		// Call the parent constructor
+		super();
+
+		// Do some constructing of our own
+		myInt = 100;
+	}
+}
+```
+
+### super methods
+
+If you have overwritten a method in an inherited object, you can still call the parent's implementation of that method. Just use `super.myMethod()`
+
+Example:
+
+```java
+public String toString()
+{
+	String parentString = super.toString(); // Call parent's toString()
+	return parentString+" inherited";
+}
+```
+
+Exceptions
+----------
+
+If an error occurs, an exception would be thrown. If you don't catch the exception, your program will crash. If you catch it, you can handle the error (or just ignore the error - Sometimes you just don't care!) and continue running your program as normal.
+Example: Say you want to make a calculator. If you divide by 0, an exception would be thrown. You can catch this and prevent your calculator from crashing:
+```java
+public String divide(double a, double b)
+{
+	try
+	{
+		// Try to divide all numbers
+		return (a / b).toString();
+	}
+	// Catch any and all exception, no matter the type
+	catch(Exception e)
+	{
+		// If an exception happened, return something else instead of crashing
+		return "Error!";
 	}
 }
 ```
