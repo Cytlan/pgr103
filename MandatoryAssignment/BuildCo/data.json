@@ -1,0 +1,96 @@
+{
+  "projects": [
+    {
+      "enddate": "2020-05-29",
+      "address": {
+        "city": "Anywhere",
+        "street": "123 Main Street",
+        "postcode": "19001",
+        "state": "PA"
+      },
+      "overhead": "0.18",
+      "name": "House",
+      "id": 1,
+      "startdate": "2019-11-03",
+      "workers": [
+        {
+          "firstname": "Peg",
+          "address": {
+            "city": "Jenkintown",
+            "street": "467 Seminole Avenue",
+            "postcode": "19446",
+            "state": "PA"
+          },
+          "hoursworked": 20,
+          "wiringcost": 3200,
+          "hourlyrate": 20,
+          "id": 1234,
+          "type": "Electrician",
+          "lastname": "Fisher"
+        },
+        {
+          "firstname": "Yusef",
+          "address": {
+            "city": "Horsham",
+            "street": "88 Stallion Circle",
+            "postcode": "19022",
+            "state": "PA"
+          },
+          "hoursworked": 30,
+          "hourlyrate": 17.5,
+          "id": 2456,
+          "lumbercost": 2000,
+          "type": "Carpenter",
+          "lastname": "Eberly"
+        },
+        {
+          "firstname": "Harley",
+          "address": {
+            "city": "Siglerville",
+            "street": "9821 Apt B",
+            "postcode": "19345",
+            "state": "PA"
+          },
+          "hoursworked": 20,
+          "plumbingcost": 2750,
+          "hourlyrate": 25,
+          "id": 3214,
+          "type": "Plumber",
+          "lastname": "Davidson"
+        }
+      ],
+      "customer": "Shire Gotshalk"
+    },
+    {
+      "enddate": "2020-05-29",
+      "address": {
+        "city": "Anywhere",
+        "street": "123 Main Street",
+        "postcode": "19001",
+        "state": "PA"
+      },
+      "overhead": "0.18",
+      "name": "House 2",
+      "id": 2,
+      "startdate": "2019-11-03",
+      "workers": [
+        {
+          "firstname": "Peg",
+          "address": {
+            "city": "Jenkintown",
+            "street": "467 Seminole Avenue",
+            "postcode": "19446",
+            "state": "PA"
+          },
+          "hoursworked": 10,
+          "wiringcost": 1500,
+          "hourlyrate": 20,
+          "id": 1234,
+          "type": "Electrician",
+          "lastname": "Fisher"
+        }
+      ],
+      "customer": "Shire Gotshalk"
+    }
+  ]
+}
