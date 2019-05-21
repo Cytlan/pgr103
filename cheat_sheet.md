@@ -51,6 +51,10 @@ Index
 * [super](#super)
     * [super constructor](#super-constructor)
     * [super methods](#super-methods)
+* [Inheritance](#inheritance)
+* [Aggregation](#aggregation)
+* [Composition](#composition)
+* [Interfaces](#interfaces)
 * [Exceptions](#exceptions)
 
 Data types
@@ -780,7 +784,7 @@ If you're inheriting a parent class and have overwritten its constructor, you ca
 class MyClass extends MyParent
 {
 	private int myInt;
-	MyClass()
+	public MyClass()
 	{
 		// Call the parent constructor
 		super();
@@ -802,6 +806,82 @@ public String toString()
 {
 	String parentString = super.toString(); // Call parent's toString()
 	return parentString+" inherited";
+}
+```
+
+Inheritance
+-----------
+
+Inheritance is when you use an existing class as a base for a new class. All the functionality of the base class will be inherited by the new class, this the name "inheritance".
+
+To inherit a class, use the `extends` keyword.
+
+```java
+class MyParent
+{
+	public String FirstMethod()
+	{
+		return "Hello";
+	}
+	public String SecondMethod()
+	{
+		return "Hello";
+	}
+}
+
+class MyClass extends MyParent
+{
+	// Declaring a method with the same signature as one found in the parent class will override the parent's method.
+	public String SecondMethod()
+	{
+		return "World";
+	}
+}
+```
+
+You can inherit an inherited class, to create multi-level inheritance.
+
+Aggregation
+-----------
+
+When your class consists of one of more objects with related information of their own, it's an aggregated class.
+For example, if you have an `Employee` class which consists of employee information, and an `Address` object with in turn contains the employee's address, this would be an example of an aggregated class.
+
+This is called a "HAS-A relationship."
+"Employee HAS AN Address".
+
+Composition
+-----------
+
+Composition is a special type of aggregation, where the contained object cannot exist in any meaningful manner without the container object.
+
+Example: A class contains students. A student cannot exist without a 
+class. There exists composition between class and students.
+
+Interfaces
+----------
+
+An interface is declared with the `interface` keyword, and is a class without any method bodies of it's own. When you `implements` an interface class, you are required to make a method for each of the methods declared by the interface.
+
+```java
+interface MyInterface
+{
+	public String FirstMethod();
+}
+
+class MyClass implements MyInterface
+{
+	// We are required to create a method for every method declared in the interface
+	public String FirstMethod()
+	{
+		return "World";
+	}
+
+	// But we're free to add anything else we want
+	public String SecondMethod()
+	{
+		return "Hello";
+	}
 }
 ```
 
